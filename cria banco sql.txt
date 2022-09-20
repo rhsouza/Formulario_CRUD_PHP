@@ -1,0 +1,14 @@
+CREATE DATABASE sistema;
+
+USE sistema;
+
+CREATE TABLE usuarios (
+  id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  nome varchar(255) NOT NULL,
+  login varchar(10) NOT NULL,
+  senha text NOT NULL,
+  status tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='acesso sistema';
+
+
+INSERT INTO usuarios (nome, login, senha, status) VALUES ('ADMINISTRADOR', 'admin', 'admin', 1);
